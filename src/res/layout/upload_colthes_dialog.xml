@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="125dp"
+    android:orientation="vertical" 
+    android:background="#f3f3f3"
+    android:layout_margin="5dp">
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:text="请选择上传的方式"
+        android:textSize="8pt"
+        android:textColor="#223d3a"
+        android:layout_margin="10dp"/>
+    <Button
+        android:id="@+id/upload_single_from_local"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="从本地上传"
+        android:drawableLeft="@drawable/from_photo_icon"
+        android:background="@drawable/dialog_btn_bg"
+        android:textColor="#ffffff"
+        android:paddingLeft="10dp"
+        android:textSize="9pt"/>
+    <Button
+        android:id="@+id/upload_single_from_camera"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="拍照上传"
+        android:drawableLeft="@drawable/from_camera_icon"
+        android:background="@drawable/dialog_btn_bg"
+        android:textColor="#ffffff"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="9pt"/>
+
+</LinearLayout>

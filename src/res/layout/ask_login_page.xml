@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center" 
+    android:background="#faebf3"
+    android:padding="15dp">
+    <ImageView 
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:src="@drawable/guimi"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="对不起，你还没有登陆，\n暂时不能使用这个功能！\n你可以："
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:textSize="8pt"
+        android:textColor="#374c4a" />
+	<Button 
+	    android:id="@+id/login_btn"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="#fff"
+        android:text="登陆"
+        android:background="@drawable/dialog_btn_bg"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/signup_btn"
+            android:text="或者 10秒快速"
+            android:textColor="#374c4a" />
+
+        <Button
+            android:id="@+id/signup_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/text1"
+            android:background="@android:color/transparent"
+            android:text="@string/signup"
+            android:textColor="#f94094" />
+    </RelativeLayout>
+</LinearLayout>

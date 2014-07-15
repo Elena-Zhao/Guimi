@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ede9e9" >
+
+    <com.guimi.myviews.NonInterreptLinearLayout
+        android:id="@+id/dlist_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ede9e9"
+        android:orientation="vertical" 
+        android:layout_marginTop="-50dp">
+
+        <LinearLayout
+            android:id="@+id/update_state_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/fading_edge"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/update_state_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下拉刷新"
+                android:textColor="#f94094" />
+        </LinearLayout>
+
+        <com.guimi.myviews.NonInterreptLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ede9e9"
+            android:orientation="horizontal" >
+
+            <com.guimi.myviews.BounceListViewForTab1
+                android:id="@+id/list1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:cacheColorHint="#ede9e9"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:fadingEdgeLength="10dp"
+                android:requiresFadingEdge="vertical"
+                android:scrollbars="none"
+                android:scrollingCache="true"
+                android:smoothScrollbar="false" >
+            </com.guimi.myviews.BounceListViewForTab1>
+
+            <com.guimi.myviews.BounceListViewForTab1
+                android:id="@+id/list2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:cacheColorHint="#ede9e9"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:fadingEdgeLength="10dp"
+                android:requiresFadingEdge="vertical"
+                android:scrollbars="none"
+                android:scrollingCache="true"
+                android:smoothScrollbar="false" >
+            </com.guimi.myviews.BounceListViewForTab1>
+        </com.guimi.myviews.NonInterreptLinearLayout>
+    </com.guimi.myviews.NonInterreptLinearLayout>
+
+<LinearLayout
+        android:id="@+id/load_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" 
+        android:background="@android:color/transparent"
+        >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" 
+            android:indeterminateDrawable="@drawable/loading"/>
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="正在加载...请稍候"
+			android:textColor="#f94094"
+         />
+    </LinearLayout>
+</FrameLayout>

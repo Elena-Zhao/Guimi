@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">闺蜜</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tab1">潮流圈</string>
+    <string name="tab2">我的衣柜</string>
+    <string name="tab3">搭配空间</string>
+    <string name="title_activity_add_tag_for_single">闺蜜</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_describe_single">上一步</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_splash">闺蜜</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_my_matches">我的搭配</string>
+    <string name="title_activity_my_collect">我的收藏</string>
+    <string name="title_activity_my_publish">我的发布</string>
+    <string name="title_activity_match_info">搭配详情</string>
+    <string name="title_activity_item_info">单品详情</string>
+    <string name="title_activity_publish_item">我的发布详情</string>
+    <string name="title_activity_myoutfit_item">我的搭配详情</string>
+    <string name="title_activity_favourate_item">我的收藏详情</string>
+
+</resources>

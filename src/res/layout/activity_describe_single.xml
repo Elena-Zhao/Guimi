@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".DescribeSingleActivity" >
+
+    <ImageView
+        android:id="@+id/preview_img"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/match4" />
+
+    <GridLayout
+        android:id="@+id/selected_tag_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/preview_img"
+        android:layout_marginBottom="20dp"
+        android:animateLayoutChanges="true"
+        android:columnCount="3" >
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/crop_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:animateLayoutChanges="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="请选择单品种类："
+                android:textAlignment="center"
+                android:textColor="#702044"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/reselect_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/reselect_type_btn"
+                android:text=""
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/select_type_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:alignmentMode="alignBounds"
+            android:columnCount="3"
+            android:rowCount="2" >
+
+            <Button
+                android:id="@+id/type_accessory"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/single_type_btn"
+                android:drawablePadding="0dp"
+                android:drawableTop="@drawable/accessories_big"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="饰品"
+                android:textAlignment="center"
+                android:textColor="#702044"
+                android:textSize="7pt" />
+
+            <Button
+                android:id="@+id/type_shirt"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/single_type_btn"
+                android:drawablePadding="0dp"
+                android:drawableTop="@drawable/shirts_big"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="上衣"
+                android:textAlignment="center"
+                android:textColor="#702044"
+                android:textSize="7pt" />
+
+            <Button
+                android:id="@+id/type_dress"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/single_type_btn"
+                android:drawablePadding="0dp"
+                android:drawableTop="@drawable/dresses_big"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="裙装"
+                android:textAlignment="center"
+                android:textColor="#702044"
+                android:textSize="7pt" />
+
+            <Button
+                android:id="@+id/type_shoe"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/single_type_btn"
+                android:drawablePadding="0dp"
+                android:drawableTop="@drawable/shoe_big"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="鞋"
+                android:textAlignment="center"
+                android:textColor="#702044"
+                android:textSize="7pt" />
+
+            <Button
+                android:id="@+id/type_trousers"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/single_type_btn"
+                android:drawablePadding="0dp"
+                android:drawableTop="@drawable/trousers_big"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="裤子"
+                android:textAlignment="center"
+                android:textColor="#702044"
+                android:textSize="7pt" />
+
+            <Button
+                android:id="@+id/type_bag"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/single_type_btn"
+                android:drawablePadding="0dp"
+                android:drawableTop="@drawable/bag_big"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="包包"
+                android:textAlignment="center"
+                android:textColor="#702044"
+                android:textSize="7pt" />
+        </GridLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadingEdgeLength="20dp"
+            android:requiresFadingEdge="vertical" >
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/select_tag_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:scrollbars="vertical" >
+                </LinearLayout>
+            </HorizontalScrollView>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

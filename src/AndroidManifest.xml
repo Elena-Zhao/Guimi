@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.guimi"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="18" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/GuiMiSecondTheme" >
+        <activity
+            android:name="com.guimi.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_splash"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.guimi.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" >
+        </activity>
+        <activity
+            android:name="com.guimi.SignupActivity"
+            android:icon="@drawable/back_icon"
+            android:label="@string/title_activity_signup" >
+        </activity>
+        <activity
+            android:name="com.guimi.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/GuiMiMainTheme" >
+            
+        </activity>
+        <activity
+            android:name="com.guimi.AddTagForSingleActivity"
+            android:icon="@drawable/back_icon"
+            android:label="@string/title_activity_add_tag_for_single" >
+        </activity>
+        <activity
+            android:name="com.guimi.DescribeSingleActivity"
+            android:icon="@drawable/back_icon"
+            android:label="@string/title_activity_describe_single" >
+        </activity>
+        <activity
+            android:name="com.guimi.TestActivity"
+            android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name="com.guimi.ShowItemInfoActivity"
+            android:icon="@drawable/back_icon"
+            android:label="@string/title_activity_item_info" >
+        </activity>
+        <activity
+            android:name="com.guimi.MyMatchesActivity"
+            android:icon="@drawable/back_icon"
+            android:label="@string/title_activity_my_matches"
+            android:theme="@style/GuiMiOverlayTheme" >
+        </activity>
+        <activity
+            android:name="com.guimi.MyCollectActivity"
+            android:icon="@drawable/back_icon"
+            android:label="@string/title_activity_my_collect"
+            android:theme="@style/GuiMiOverlayTheme" >
+        </activity>
+        <activity
+            android:name="com.guimi.MyPublishActivity"
+            android:icon="@drawable/back_icon"
+            android:label="@string/title_activity_my_publish"
+            android:theme="@style/GuiMiOverlayTheme" >
+        </activity>
+        <activity 
+            android:name="com.guimi.ShowMyFavorateOutfitActivity" 
+            android:icon="@drawable/back_icon"
+            android:label="@string/title_activity_favourate_item">
+        </activity>
+        <activity 
+            android:name="com.guimi.ShowMyOutfitActitivity" 
+            android:icon="@drawable/back_icon"
+            android:label="@string/title_activity_myoutfit_item">
+        </activity>
+        <activity 
+            android:name="com.guimi.ShowMyPublishOutfitActivity" 
+            android:icon="@drawable/back_icon"
+            android:label="@string/title_activity_publish_item">
+        </activity>
+        <activity
+            android:name="MatchInfoActivity"
+            android:label="@string/title_activity_match_info" 
+            android:icon="@drawable/back_icon">
+        </activity>
+        <activity android:name="CombinePicActivity"></activity>
+        <activity android:name=".uploadPhoto.combineUtil.ImageGridActivity"></activity>
+        <activity android:name=".uploadPhoto.combineUtil.PublishedActivity"></activity>
+    </application>
+
+</manifest>

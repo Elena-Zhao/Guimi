@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ede9e9"
+    >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    tools:context=".MyMatchesActivity" >
+
+    
+   <com.guimi.myviews.NonInterreptLinearLayout 
+        android:id="@+id/dlist_container"
+       	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="horizontal"
+    	android:background="#ede9e9"
+    >
+       <com.guimi.myviews.BounceListView
+           android:id="@+id/list1"
+           android:layout_weight="1"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent" 
+           android:scrollbars="none"
+           android:scrollingCache="true"
+           android:smoothScrollbar="false"
+           android:dividerHeight="0dp"
+           android:divider="@android:color/transparent"
+           android:layout_marginLeft="1dp"
+           android:cacheColorHint="#ede9e9"
+           android:requiresFadingEdge="vertical"
+           android:fadingEdgeLength="10dp"
+           android:padding="2dp">
+       </com.guimi.myviews.BounceListView>
+        <com.guimi.myviews.BounceListView
+            android:id="@+id/list2"
+           android:layout_weight="1"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:scrollbars="none"
+           android:scrollingCache="true"
+           android:smoothScrollbar="false"
+           android:dividerHeight="0dp"
+           android:divider="@android:color/transparent"
+           android:layout_marginRight="1dp"
+           android:cacheColorHint="#ede9e9"
+           android:requiresFadingEdge="vertical"
+           android:fadingEdgeLength="10dp"
+           android:padding="2dp">
+           
+       </com.guimi.myviews.BounceListView>
+
+</com.guimi.myviews.NonInterreptLinearLayout> 
+
+</LinearLayout>
+<LinearLayout
+        android:id="@+id/load_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" 
+        android:background="#fff"
+        >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" 
+            android:indeterminateDrawable="@drawable/loading"/>
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="正在加载...请稍候"
+			android:textColor="#f94094"
+         />
+    </LinearLayout>
+</FrameLayout>

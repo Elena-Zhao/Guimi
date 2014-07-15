@@ -1,0 +1,179 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".AddTagForSingleActivity">
+
+<TextView
+    android:id="@+id/select_type_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:text="请选择搭配的组成："
+    android:textColor="#702044"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="10dp"
+    android:gravity="center"
+    android:textAlignment="center"
+    />
+
+<com.guimi.myviews.HorizontalListView
+    android:id="@+id/add_type_buttons"
+    android:layout_width="wrap_content"
+    android:layout_below="@+id/select_type_title"
+    android:layout_height="75dp"
+    android:layout_marginRight="25dp"
+    android:layout_centerHorizontal="true" 
+    />
+<TextView 
+    android:layout_below="@+id/add_type_buttons"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#ff88c8"
+    />
+<ScrollView
+        android:id="@+id/items_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/add_type_buttons" 
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="10dp">
+
+        <LinearLayout
+            android:id="@+id/items_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/tag_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tag_panel_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp" >
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="15dp"
+                android:textSize="10pt"
+                android:textColor="#702044"
+                android:text="名称" />
+
+            <Button
+                android:id="@+id/edit_tag_finish_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/finished_btn_bg"
+                android:paddingRight="10dp"
+                android:text="" 
+                />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="bottom" 
+            android:requiresFadingEdge="vertical"
+            android:fadingEdgeLength="10dp">
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/tag_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </ScrollView>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/describe_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+      	android:background="#fff"
+      	android:gravity="center"
+      	android:visibility="gone"
+        >
+        <LinearLayout
+        android:id="@+id/load_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" 
+        >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" 
+            android:indeterminateDrawable="@drawable/loading"/>
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="正在上传，请稍候..."
+			android:textColor="#f94094"
+         />
+    </LinearLayout>
+        
+        <EditText
+                android:id="@+id/describe_text"
+                android:layout_width="270dp"
+                android:layout_height="100dp"
+                android:hint="请用一段话来描述这个搭配"
+                android:maxLines="3"
+                android:inputType="textMultiLine" 
+                android:background="@drawable/login_input"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:textColor="#22534e"/>
+        <Button
+                android:id="@+id/finish_button"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="完成"
+                android:textColor="#fff"
+                android:background="@drawable/dialog_btn_bg"
+                />
+        
+        
+    </LinearLayout>
+
+</RelativeLayout>

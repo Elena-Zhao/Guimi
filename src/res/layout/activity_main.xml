@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context=".MainActivity" >
+   <TabHost 
+    android:id="@android:id/tabhost"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:layout_alignParentLeft="true"  
+    android:layout_centerVertical="true" >  
+    
+   <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" 
+          android:orientation="vertical">     
+  <TabWidget  
+            android:id="@android:id/tabs"  
+            android:layout_width="fill_parent"  
+            android:layout_height="40dp" 
+            android:layout_gravity="top"
+            android:background="@drawable/tab_bg_unselected"
+            android:showDividers="none"
+            >  
+        </TabWidget>  
+    
+    <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0">
+     </FrameLayout>
+     
+    
+       <LinearLayout
+           android:id="@+id/fragment_content"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:orientation="vertical" 
+          />
+     
+
+</LinearLayout>  
+</TabHost>  
+</RelativeLayout>

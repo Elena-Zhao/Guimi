@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:textAlignment="center"
+    android:gravity="center"
+    android:background="@drawable/my_match_item_bg">
+    <RelativeLayout
+        android:padding="1dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/null_image_icon">
+    	<ImageView
+    	    android:id="@+id/image"
+        	android:layout_width="fill_parent"
+        	android:layout_height="match_parent"
+        	android:scaleType="centerCrop"
+        	android:maxHeight="500dp"
+        	android:adjustViewBounds="true"
+        />
+    	<com.guimi.myviews.NonInterreptImageBtn 
+    	    android:id="@+id/add_image"
+    	    android:layout_width="30dp"
+    	    android:layout_height="30dp"
+    	    android:scaleType="fitCenter"
+    	    android:src="@drawable/publish_btn"
+    	    android:background="@android:color/transparent"
+    	    android:padding="0dp"
+    	    android:layout_alignRight="@id/image"
+    	    />
+	</RelativeLayout>
+	
+</LinearLayout>

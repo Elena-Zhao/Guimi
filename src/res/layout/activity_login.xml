@@ -1,0 +1,158 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".LoginActivity" >
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" 
+        >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" 
+            android:indeterminateDrawable="@drawable/loading"/>
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+			android:textColor="#f94094"
+         />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+         
+        android:background="@drawable/login_bg">
+
+        <RelativeLayout
+            style="@style/LoginFormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:hint="这里输入电话号码"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:singleLine="true" 
+                android:background="@drawable/login_input"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/username_icon"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:textColor="#22534e"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:hint="密码"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" 
+                android:background="@drawable/login_input"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/password_icon"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:textColor="#22534e"
+                android:layout_below="@+id/email"/>
+
+
+            <Button
+                android:id="@+id/sign_in_button"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:background="@drawable/login_btn_bg" 
+                android:layout_below="@+id/password"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sign_in_button"
+                android:layout_centerHorizontal="true"
+                >
+            <TextView 
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="还没有账号？10秒快速"
+                android:layout_alignBaseline="@+id/signup"
+                android:textColor="#374c4a"/>
+            <Button 
+                android:id="@+id/signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup"
+                android:background="@android:color/transparent"
+                android:layout_toRightOf="@+id/text1"
+                android:textColor="#f94094"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/signup">
+              
+            <TextView 
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="或者  "
+                android:textColor="#374c4a"/>
+            <Button 
+                android:id="@+id/goandsee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/go_and_see"
+                android:background="@android:color/transparent"
+                android:textColor="#f94094"
+                />
+            <TextView 
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  ?"
+                android:textColor="#374c4a"/>
+              
+            </LinearLayout>
+            </RelativeLayout>
+        
+        
+
+</RelativeLayout>
+    </ScrollView>
+
+</merge>
